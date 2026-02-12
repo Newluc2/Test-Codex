@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Mini .io Arena</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <main class="layout">
+      <section class="game-panel">
+        <h1>Mini .io Arena</h1>
+        <p>
+          Déplace-toi, mange les orbes, monte dans le classement. Les bots IA sont
+          déjà actifs pour simuler le futur mode « bots automatiques ».
+        </p>
+        <canvas id="arena" width="900" height="560" aria-label="Arène de jeu"></canvas>
+        <div class="controls">
+          <span><strong>ZQSD / WASD</strong> pour bouger</span>
+          <span><strong>Shift</strong> pour accélérer</span>
+          <button id="restart">Recommencer</button>
+        </div>
+      </section>
+      <aside class="sidebar">
+        <h2>Leaderboard</h2>
+        <ol id="leaderboard"></ol>
+        <h3>Ton état</h3>
+        <p id="player-stats"></p>
+        <h3>Plan bots automatiques</h3>
+        <ul>
+          <li>API locale d'état prête (voir <code>window.gameState</code>)</li>
+          <li>Tick déterministe pour brancher un bot externe</li>
+          <li>Stratégie bot interne (chasse + fuite + collecte)</li>
+        </ul>
+      </aside>
+    </main>
+
+    <script src="game.js"></script>
+  </body>
+</html>
